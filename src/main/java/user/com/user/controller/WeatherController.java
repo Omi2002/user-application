@@ -29,4 +29,9 @@ public class WeatherController {
         logger.info("Fetching 1-day weather forecast...");
         return weatherService.fetchOneDayForecast();
     }
+
+    @GetMapping("/hello")
+    public ResponseEntity<String> sayHello() {
+        return ResponseEntity.ok("Hello from Spring Boot!");
+    }
 }
